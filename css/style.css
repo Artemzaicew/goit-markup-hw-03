@@ -22,9 +22,23 @@
     font-family: 'Roboto',sans-serif;
 }
 
+.section {
+    padding-bottom: 120px;
+}
+
 .list {
    list-style: none;
+   padding: 0;
+   margin: 0;
 }
+ header {
+    border-bottom: 1px solid var(--footer-text-color)
+}
+
+/* .header {
+    padding-top: 24px;
+    padding-bottom: 24px;
+} */
 
 /* logo headder */
 .logo-header {
@@ -37,6 +51,9 @@
     text-decoration: none;
 
     text-transform: uppercase;
+
+    padding-top: 24px;
+    padding-bottom: 24px;
 }
 
 span {
@@ -45,6 +62,10 @@ span {
 
 /* site-nav */
 .site-nav .link {
+    display: block;
+    padding-top: 24px;
+    padding-bottom: 24px;
+
     color: var(--primary-text-color);
     font-weight: 500;
     font-size: 16px;
@@ -57,8 +78,42 @@ span {
     color: var(--accent-color);
 }
 
+.site-nav {
+    display: flex;
+    margin-left: 76px;
+}
+
+.site-nav .item + .item {
+    margin-left: 40px;
+}
+
+.container {
+    width: 1152px;
+    padding-left: 12px;
+    padding-right: 12px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 /* info-nav */
+.info-nav {
+    display: flex;
+    margin-left: auto; 
+}
+
+.position {
+margin-left: auto;
+}
+
+.info-nav .item + .item {
+    margin-left: 40px;
+}
+
 .info-nav .link {
+    display: block;
+    padding-top: 24px;
+    padding-bottom: 24px;
+
     color: var(--secondary-text-color);
     font-style: normal;
     font-size: 16px;
@@ -71,28 +126,47 @@ span {
     color: var(--accent-color);
 }
 
+.main-nav {
+    display: flex;
+    align-items: center;
+}
+
 /* hero */
 .hero {
     background-color: var(--primary-text-color);
+    text-align: center;
+
+    padding-top: 188px;
+    padding-bottom: 188px;
 }
 
 .hero-title {
     color: var(--white-color);
     font-size: 56px;
     line-height: 1;
-    text-align: center; 
+
+    margin-top: 0;
+    margin-bottom: 48px;
 }
 
 /* button-service */
 .button-service {
     color: var(--white-color);
     background-color: var(--accent-color);
+
     cursor: pointer;
     font-family: inherit;
     font-weight: 500;
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.04em;
+    text-align: center;
+
+    display: inline-block;
+    border-radius: 4px;
+    padding: 16px 32px;
+    min-width: 169px;
+    border: none;
 }
 
 .button-service:hover,
@@ -107,25 +181,88 @@ span {
     line-height: 1.1;
 
     text-align: center;
+    margin-top: 0;
+    margin-bottom: 72px;
 }
 
-/* Peculiarity title */
-.Peculiarity .title {
+/* Peculiarity */
+.peculiarity .title {
     color: var(--primary-text-color);
     font-weight: 500;
     font-size: 20px;
     line-height: 1.2;
+    margin-top: 0;
+    margin-bottom: 8px;
 }
 
-/* section tem bcg color */
+.peculiarity p{
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.peculiarity {
+    display: flex;
+}
+.section-peculiarity {
+    padding-top: 120px;
+    padding-bottom: 120px;
+}
+
+.peculiarity .item {
+    width: 100%;
+}
+
+.peculiarity .item + .item {
+    margin-left: 24px;
+}
+/* .peculiarity.list .item:not(:last-child), .employment-list .item:not(:last-child), .team-list .item:not(:last-child) {
+    margin-right: 24px;
+} */
+.list-img {
+    display: flex;
+}
+
+.list-img .item + .item {
+    margin-left: 24px;
+}
+
+/* section team */
 .team {
     background-color: var(--section-team-bcg-color);
+    padding-top: 120px;
 }
 
-/* footer color */
+.list .title {
+    margin-top: 0;
+    margin-bottom: 8px;
+}
+
+.list p {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.list-team {
+    display: flex;
+}
+
+.list-team .item + .item {
+    margin-left: 24px;
+}
+
+.list-team .card-content {
+    padding: 32px 16px;
+    background-color: var(--white-color);
+
+    text-align: center;
+}
+
+/* footer */
 .footer {
     color: var(--footer-text-color);
     background-color: var(--primary-text-color);
+    padding-top: 100px;
+    padding-bottom: 100px;
 }
 
 /* logo footer */
@@ -137,36 +274,73 @@ span {
     text-transform: uppercase;
 }
 
+.footer p {
+    margin-top: 16px;
+    margin-bottom: 0;
+}
+
+
 
 
 /* portfolio.html____________________ 
 button*/
 
+.list-button {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 72px;
+}
 
+.list-button .item + .item {
+    margin-left: 24px;
+}
 
 .list .button {
+    display: inline-block;
     color: var(--accent-color);
     background-color: var(--section-team-bcg-color);
+    
     cursor: pointer;
     font-family: inherit;
     font-weight: 500;
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.04em;
+
+    padding: 12px 24px;
+    border-radius: 4px;
+    border: 1px solid var(--footer-text-color);
 }
 
 .list .button:hover,
 .list .button:focus {
     color: var(--white-color);
     background-color: var(--button-hover-portfolio);
+
+    border: 1px solid transparent;
+}
+
+.footer-text {
+    width: 264px;
 }
 
 /* activity */
+
+.activity-nav {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -12px;
+}
+
+
     .activity-nav .title {
     color: var(--primary-text-color);
     font-weight: 500;
     font-size: 20px;
-    line-height: 1.2;   
+    line-height: 1.2;  
+    
+    margin-top: 0;
+    margin-bottom: 8px;
 }
 
 .activity-nav .link {
@@ -177,7 +351,35 @@ button*/
     color: var(--secondary-text-color);
     font-size: 16px;
     line-height: 1.5;
+
+    margin-top: 0;
+    margin-bottom: 0;
 }
+.activity-nav .item {
+    width: 360px;
+    margin: 12px;
+}
+/* .activity-nav .item {
+    width: calc((100% - 48px) / 3);
+    margin-right: 24px;
+    margin-top: 48px;
+}
+
+.activity-nav:nth-child(3n) {
+    margin-right: 0;
+} */
+
+.activity-nav .card-content {
+    padding: 32px 16px;
+    background-color: var(--white-color);
+}
+
+.portfolio {
+    padding-top: 96px;
+    padding-bottom: 120px;
+}
+
+
 
 /* visually-hidden */
 .visually-hidden {
