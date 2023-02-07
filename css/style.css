@@ -14,6 +14,8 @@
     --section-team-bcg-color: #F4F4FD;
     --footer-text-color: #E7E9FC;
     --button-hover-portfolio: #404BBF;
+    --activity-nav-gap-left: 24px;
+    --activity-nav-gap-top: 48px;
 }
 
  body {
@@ -341,18 +343,25 @@ button*/
 .activity-nav {
     display: flex;
     flex-wrap: wrap;
-    margin: -12px;
+    margin-left: ( -1 * var(--activity-nav-gap-left));
+    margin-top: ( -1 * var(--activity-nav-gap-top));
 }
 
+.activity-nav .item {
+    width: 360px;
+    flex-basis: calc(100% / 3 - var(--activity-nav-gap-left));
+    margin-left: var(--activity-nav-gap-left);
+    margin-top: var(--activity-nav-gap-top);
+}
 
-    .activity-nav .title {
-    color: var(--primary-text-color);
-    font-weight: 500;
-    font-size: 20px;
-    line-height: 1.2;  
+.activity-nav .title {
+color: var(--primary-text-color);
+font-weight: 500;
+font-size: 20px;
+line-height: 1.2;  
     
-    margin-top: 0;
-    margin-bottom: 8px;
+margin-top: 0;
+margin-bottom: 8px;
 }
 
 .activity-nav .link {
@@ -367,10 +376,7 @@ button*/
     margin-top: 0;
     margin-bottom: 0;
 }
-.activity-nav .item {
-    width: 360px;
-    margin: 12px;
-}
+
 /* .activity-nav .item {
     width: calc((100% - 48px) / 3);
     margin-right: 24px;
@@ -383,7 +389,10 @@ button*/
 
 .activity-nav .card-content {
     padding: 32px 16px;
-    background-color: var(--white-color);
+    /* background-color: var(--footer-text-color); */
+    border-right: 1px solid var(--footer-text-color);
+    border-left: 1px solid var(--footer-text-color);
+    border-bottom: 1px solid var(--footer-text-color);
 }
 
 .portfolio {
